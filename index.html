@@ -1,0 +1,47 @@
+<!doctype html>
+<html ng-app="jogoApp">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+
+    <script src="jogo.js"></script>
+
+    <link rel="stylesheet" href="jogo.css">
+
+</head>
+<body style="background-color: lightgray;">
+
+    <header>    </header>
+    <h1 style="text-align: center;">Jogo da Velha</h1>
+    <div ng-controller="jogoController as vm">
+
+        {{vm.teste}}
+        <table class="tg">
+            <tbody>
+              <tr>
+                <td class="tg-73oq" id="a1" ng-click="vm.teste = vm.teste + 1"><input type="image" src="img/bola.png"></td>
+                <td class="tg-73oq" id="a2" ng-click="vm.jogou($event)"></td>
+                <td class="tg-73oq" id="a3" ng-click="vm.inserirImagem($event)"></td>
+              </tr>
+              <tr>
+                <td class="tg-73oq" id="b1"></td>
+                <td class="tg-73oq" id="b2"></td>
+                <td class="tg-73oq" id="b3"></td>
+              </tr>
+              <tr>
+                <td class="tg-73oq" id="c1"></td>
+                <td class="tg-73oq" id="c2"></td>
+                <td class="tg-73oq" id="c3"></td>
+              </tr>
+            </tbody>
+        </table>
+    
+    </div>
+
+
+
+</body>
+</html>
